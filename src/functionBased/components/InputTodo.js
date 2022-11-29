@@ -18,17 +18,15 @@ const InputTodo = ({ addTodoProps }) => {
 
   const addBook = (e) => {
     e.preventDefault();
-    const 
-    // if (inputText.title.trim()) {
-    //   addTodoProps(inputText.title);
-    //   setInputText({
-    //     title: '',
-    //   });
-    // } else {
-    //   alert('Please write item');
-    // }
+    if (inputText.title.trim()) {
+      addTodoProps(inputText.title);
+      setInputText({
+        title: '',
+      });
+    } else {
+      alert('Please write item');
+    }
   };
-
 
   return (
     <form className="form-container">
