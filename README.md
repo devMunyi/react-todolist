@@ -10,13 +10,13 @@
 
 ## Getting Started
 
-### See [live Demo](https://devmunyi.github.io/todo-list-with-reactjs/)
+### See [live Demo](https://devmunyi.github.io/react-todolist/)
 
 To get a local copy up and running follow these simple example steps:
 
 - Open your terminal or command line
-- Run `git clone https://github.com/devMunyi/todo-list-with-reactjs` to have a copy on your computer
-- After the clone, type in the command `cd todo-list-with-reactjs` to access the directory on the terminal
+- Run `git clone https://github.com/devMunyi/react-todolist` to have a copy on your computer
+- After the clone, type in the command `cd react-todolist` to access the directory on the terminal
 - run `npm install` to install depencencies.
 - Run `npm run start` and it will load a live server in http://localhost:3000/
 
