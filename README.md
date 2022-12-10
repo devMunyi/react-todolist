@@ -9,9 +9,6 @@
 - Localstorage
 
 ## Getting Started
-
-### See [live Demo](https://devmunyi.github.io/react-todolist/)
-
 To get a local copy up and running follow these simple example steps:
 
 - Open your terminal or command line
