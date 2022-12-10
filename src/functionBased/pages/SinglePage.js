@@ -13,7 +13,7 @@ const SinglePage = () => {
       slug: 'about-author',
       title: 'About the Author',
       description:
-        'This app was developed by Samuel Munyi, a self-taught web developer and a technical writer. He is opened to freelance Gig. So go ahead and connect on <a href="https://www.linkedin.com/in/samuel-munyi/">linkedin</a>',
+        'This app was developed by Samuel Munyi, a self-taught web developer and a technical writer. He is opened to freelance Gig. So go ahead and connect on',
     },
   ];
 
@@ -24,7 +24,21 @@ const SinglePage = () => {
   return (
     <div className="main__content">
       <h1>{title}</h1>
-      <p>{description}</p>
+      <div>
+        <span style={{ display: 'inline' }}>
+          {description}
+          {' '}
+          <a
+            style={{
+              display: 'inline', fontSize: '12px', margin: 0, padding: 0
+            }}
+            href="https://www.linkedin.com/in/samuel-munyi/"
+          >
+            LinkedIn
+          </a>
+        </span>
+
+      </div>
     </div>
   );
 };

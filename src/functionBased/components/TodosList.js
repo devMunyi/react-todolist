@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
@@ -7,7 +6,7 @@ const TodosList = ({
   todos = [],
   handleChangeProps,
   deleteTodoProps,
-  setUpdate,
+  setUpdateProps,
 }) => (
   <ul>
     {todos.map((todo) => (
@@ -16,17 +15,17 @@ const TodosList = ({
         todo={todo}
         handleChangeProps={handleChangeProps}
         deleteTodoProps={deleteTodoProps}
-        setUpdate={setUpdate}
+        setUpdateProps={setUpdateProps}
       />
     ))}
   </ul>
 );
 
 TodosList.propTypes = {
-  todos: PropTypes.array,
-  handleChangeProps: PropTypes.func,
-  deleteTodoProps: PropTypes.func,
-  setUpdate: PropTypes.func,
+  todos: PropTypes.instanceOf(Array).isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
+  setUpdateProps: PropTypes.func.isRequired,
 };
 
 export default TodosList;

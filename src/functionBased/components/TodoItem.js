@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaTrash } from 'react-icons/fa';
@@ -7,9 +6,7 @@ import styles from './TodoItem.module.css';
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
 
-  const handleEditing = () => {
-    setEditing(true);
-  };
+  const handleEditing = () => setEditing(true);
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
@@ -33,8 +30,13 @@ const TodoItem = (props) => {
     editMode.display = 'none';
   }
 
-  const { todo, handleChangeProps, deleteTodoProps, setUpdate } = props;
-  const { completed, id, title } = todo;
+  const {
+    todo, handleChangeProps, deleteTodoProps, setUpdateProps
+  } = props;
+
+  const {
+    completed, id, title
+  } = todo;
 
   return (
     <li className={styles.item}>
@@ -56,7 +58,7 @@ const TodoItem = (props) => {
         className={styles.textInput}
         value={title}
         onChange={(e) => {
-          setUpdate(e.target.value, id);
+          setUpdateProps(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
       />
@@ -65,10 +67,10 @@ const TodoItem = (props) => {
 };
 
 TodoItem.propTypes = {
-  todo: PropTypes.object,
-  handleChangeProps: PropTypes.func,
-  deleteTodoProps: PropTypes.func,
-  setUpdate: PropTypes.func,
+  todo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
+  setUpdateProps: PropTypes.func.isRequired,
 };
 
 export default TodoItem;

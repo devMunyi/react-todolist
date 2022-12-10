@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -13,7 +12,6 @@ const InputTodo = ({ addTodoProps }) => {
       ...inputText,
       [e.target.name]: e.target.value,
     });
-    // setTitle(e.target.value);
   };
 
   const addBook = (e) => {
@@ -24,6 +22,7 @@ const InputTodo = ({ addTodoProps }) => {
         title: '',
       });
     } else {
+      // eslint-disable-next-line
       alert('Please write item');
     }
   };

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
@@ -10,12 +9,12 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: '/todo-list-with-reactjs',
+      path: '/',
       text: 'Home',
     },
     {
       id: 2,
-      path: '/todo-list-with-reactjs/about',
+      path: '/about',
       text: 'About',
     },
   ];
@@ -45,11 +44,9 @@ const Navbar = () => {
             <li key={link.id}>
               <NavLink
                 to={link.path}
-                style={({ isActive }) =>
-                  isActive
-                    ? { color: 'orange', textDecoration: 'underline' }
-                    : { color: 'black', textDecoration: 'none' }
-                }
+                style={({ isActive }) => (isActive
+                  ? { color: 'orange', textDecoration: 'underline' }
+                  : { color: 'black', textDecoration: 'none' })}
                 onClick={() => closeMenu()}
               >
                 {link.text}
